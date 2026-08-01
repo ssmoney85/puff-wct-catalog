@@ -52,6 +52,31 @@
   .cluster-3 .pkg3{left:54%;top:12%;transform:rotate(7deg);z-index:1}
   .cluster-1 img{max-width:78%;max-height:100%}
 
+  /* Pouch cluster (5-pack): larger mockups, tighter overlap so they fill the space */
+  .cluster-pouch{height:340px}
+  .cluster-pouch img{max-width:50%;max-height:96%;border-radius:8px}
+  .cluster-pouch.cluster-3 .pkg1{left:-2%;top:8%;transform:rotate(-9deg);z-index:1}
+  .cluster-pouch.cluster-3 .pkg2{left:24%;top:-2%;transform:rotate(0deg);z-index:3}
+  .cluster-pouch.cluster-3 .pkg3{left:52%;top:8%;transform:rotate(9deg);z-index:2}
+
+  /* Box cluster (14-pack): shorter, wider mockups */
+  .cluster-box{height:300px}
+  .cluster-box img{max-width:44%;max-height:100%}
+  .cluster-box.cluster-3 .pkg1{left:0%;top:14%;transform:rotate(-7deg);z-index:1}
+  .cluster-box.cluster-3 .pkg2{left:26%;top:0%;transform:rotate(0deg);z-index:3}
+  .cluster-box.cluster-3 .pkg3{left:54%;top:14%;transform:rotate(7deg);z-index:2}
+
+  /* WCT bag cluster (single big flat mockup) */
+  .cluster-bag{height:320px}
+  .cluster-bag img{max-width:82%;max-height:100%;border-radius:12px}
+
+  /* WCT vape cluster */
+  .cluster-vape{height:300px}
+  .cluster-vape img{max-width:34%}
+  .cluster-vape.cluster-3 .pkg1{left:2%;top:0%;transform:rotate(-6deg)}
+  .cluster-vape.cluster-3 .pkg2{left:32%;top:-2%;transform:rotate(0deg);z-index:3}
+  .cluster-vape.cluster-3 .pkg3{left:62%;top:0%;transform:rotate(6deg)}
+
   /* center info */
   .info{text-align:center;padding:0 6px}
   .brandbar{display:flex;flex-direction:column;align-items:center;gap:2px;margin-bottom:8px}
@@ -101,6 +126,10 @@
 
   .oos-note{text-align:center;color:#7a748c;padding:22px;font-style:italic}
 
+  /* Centered info-bullets illustration below each PUFF strain grid */
+  .info-wrap{display:flex;justify-content:center;padding:18px 8px 4px}
+  .info-wrap .info-bullets{max-width:min(560px,90%);height:auto;filter:drop-shadow(0 4px 10px rgba(0,0,0,.15))}
+
   /* ---------- section headers ---------- */
   .section-head{display:flex;align-items:center;justify-content:center;gap:16px;margin:36px 0 8px;color:#fff}
   .section-head img{height:60px;width:auto;filter:drop-shadow(0 3px 6px rgba(0,0,0,.25))}
@@ -128,11 +157,11 @@
 </style></head><body>
 <div class="top">
   <h1>PUFF &amp; WEST COAST TREEZ</h1>
-  <div class="sub">Live Wholesale Catalog · Updated July 29, 2026</div>
+  <div class="sub">Live Wholesale Catalog · Updated August 01, 2026</div>
   <div class="live">LIVE FROM NABIS INVENTORY</div>
 </div>
 <div class="site-sale">
-  <div class="banner"><span>AGING DISCOUNTS AVAILABLE</span><b>UP TO 50% OFF</b><span>SELECT BATCHES</span></div>
+  <div class="banner"><span>SITEWIDE SALE</span><b>15% OFF</b><span>SPEND $3K+</span></div>
 </div>
 <div class="bar">
   <input id="q" placeholder="Search strain or product…" oninput="flt()">
@@ -148,7 +177,7 @@
   </div>
 <section class="sku sku-flower brand-PUFF" data-brand="PUFF" data-oos="0">
   <div class="hero">
-    <div class="cluster cluster-3"><img class="pkg pkg1" src="assets/sku_ss_1g_okk.png" alt="ONE GRAM PREROLL"><img class="pkg pkg2" src="assets/sku_ss_1g_bd.png" alt="ONE GRAM PREROLL"><img class="pkg pkg3" src="assets/sku_ss_1g_lcg.png" alt="ONE GRAM PREROLL"></div>
+    <div class="cluster cluster-3 cluster-tube"><img class="pkg pkg1" src="assets/sku_ss_1g_okk.png" alt="ONE GRAM PREROLL"><img class="pkg pkg2" src="assets/sku_ss_1g_bd.png" alt="ONE GRAM PREROLL"><img class="pkg pkg3" src="assets/sku_ss_1g_lcg.png" alt="ONE GRAM PREROLL"></div>
     <div class="info">
       <div class="brandbar">
         <img class="brand-logo" src="assets/puff_logo.png" alt="PUFF">
@@ -158,13 +187,17 @@
       <h2 class="title">ONE GRAM PREROLL</h2>
       <div class="case">(25 count case)</div>
       
-        <div class="price-split single">
+        <div class="price-split">
           <div class="pricebox pricebox-ws">
             <div class="plabel">WHOLESALE</div>
             <div class="pval">$1.99</div>
           </div>
+          <div class="pricebox pricebox-sale">
+            <div class="plabel">15% OFF</div>
+            <div class="pval">$1.69</div>
+          </div>
         </div>
-        <div class="pnote">*List price per unit</div>
+        <div class="pnote">*Spend $3K+ for sitewide 15% off · List price per unit</div>
     </div>
     <div class="tray-col">
       <img class="tray" src="assets/tray_1g_preroll.png" alt="ONE GRAM PREROLL">
@@ -178,13 +211,13 @@
       <span class="col-h col-h-thc">THC%</span>
       <span class="cnt">16 strains in stock</span>
     </div>
-    <div class="strain-grid"><div class="pill" data-text="blue dream"><span class="pill-name">Blue Dream</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">26%</span></div><div class="pill" data-text="lemonwreck"><span class="pill-name">Lemonwreck</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="limesicle"><span class="pill-name">Limesicle</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="orange tree"><span class="pill-name">Orange Tree</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="sour diesel"><span class="pill-name">Sour Diesel</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="banana og"><span class="pill-name">Banana OG</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="blue cheese"><span class="pill-name">Blue Cheese</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="grape drink"><span class="pill-name">Grape Drink</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="og kush"><span class="pill-name">OG Kush</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">25%</span></div><div class="pill" data-text="wedding cake"><span class="pill-name">Wedding Cake</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">26%</span></div><div class="pill" data-text="alien og"><span class="pill-name">Alien OG</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="cereal milk"><span class="pill-name">Cereal Milk</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">25%</span></div><div class="pill" data-text="headband"><span class="pill-name">Headband</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="jetfuel"><span class="pill-name">Jetfuel</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">24%</span></div><div class="pill" data-text="lemon cherry gelato"><span class="pill-name">Lemon Cherry Gelato</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="trop cherry"><span class="pill-name">Trop Cherry</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">26%</span></div></div>
+    <div class="strain-grid"><div class="pill" data-text="blue dream"><span class="pill-name">Blue Dream</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">26%</span></div><div class="pill" data-text="lemonwreck"><span class="pill-name">Lemonwreck</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="limesicle"><span class="pill-name">Limesicle</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="orange tree"><span class="pill-name">Orange Tree</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="sour diesel"><span class="pill-name">Sour Diesel</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="banana og"><span class="pill-name">Banana OG</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="blue cheese"><span class="pill-name">Blue Cheese</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="grape drink"><span class="pill-name">Grape Drink</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="og kush"><span class="pill-name">OG Kush</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">25%</span></div><div class="pill" data-text="wedding cake"><span class="pill-name">Wedding Cake</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">26%</span></div><div class="pill" data-text="alien og"><span class="pill-name">Alien OG</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="cereal milk"><span class="pill-name">Cereal Milk</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">25%</span></div><div class="pill" data-text="headband"><span class="pill-name">Headband</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="jetfuel"><span class="pill-name">Jetfuel</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">24%</span></div><div class="pill" data-text="lemon cherry gelato"><span class="pill-name">Lemon Cherry Gelato</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="trop cherry"><span class="pill-name">Trop Cherry</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">26%</span></div></div>
   </div>
-  <img class="info-bullets" src="assets/info_strain_specific.png" alt="">
+  <div class="info-wrap"><img class="info-bullets" src="assets/info_strain_specific.png" alt=""></div>
 </section>
 <section class="sku sku-flower brand-PUFF" data-brand="PUFF" data-oos="0">
   <div class="hero">
-    <div class="cluster cluster-3"><img class="pkg pkg1" src="assets/sku_ss_5pk_okk.jpg" alt="HALF GRAM 5-PACK"><img class="pkg pkg2" src="assets/sku_ss_5pk_lcg.jpg" alt="HALF GRAM 5-PACK"><img class="pkg pkg3" src="assets/sku_ss_5pk_bd.jpg" alt="HALF GRAM 5-PACK"></div>
+    <div class="cluster cluster-3 cluster-pouch"><img class="pkg pkg1" src="assets/sku_ss_5pk_okk.jpg" alt="HALF GRAM 5-PACK"><img class="pkg pkg2" src="assets/sku_ss_5pk_lcg.jpg" alt="HALF GRAM 5-PACK"><img class="pkg pkg3" src="assets/sku_ss_5pk_bd.jpg" alt="HALF GRAM 5-PACK"></div>
     <div class="info">
       <div class="brandbar">
         <img class="brand-logo" src="assets/puff_logo.png" alt="PUFF">
@@ -194,13 +227,17 @@
       <h2 class="title">HALF GRAM 5-PACK</h2>
       <div class="case">(10 count case)</div>
       
-        <div class="price-split single">
+        <div class="price-split">
           <div class="pricebox pricebox-ws">
             <div class="plabel">WHOLESALE</div>
             <div class="pval">$5.99</div>
           </div>
+          <div class="pricebox pricebox-sale">
+            <div class="plabel">15% OFF</div>
+            <div class="pval">$5.09</div>
+          </div>
         </div>
-        <div class="pnote">*List price per unit</div>
+        <div class="pnote">*Spend $3K+ for sitewide 15% off · List price per unit</div>
     </div>
     <div class="tray-col">
       <img class="tray" src="assets/tray_5pk_preroll.png" alt="HALF GRAM 5-PACK">
@@ -216,11 +253,11 @@
     </div>
     <div class="strain-grid"><div class="pill" data-text="blue dream"><span class="pill-name">Blue Dream</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">26%</span></div><div class="pill" data-text="lemonwreck"><span class="pill-name">Lemonwreck</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="limesicle"><span class="pill-name">Limesicle</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="orange tree"><span class="pill-name">Orange Tree</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="sour diesel"><span class="pill-name">Sour Diesel</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="banana og"><span class="pill-name">Banana OG</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">26%</span></div><div class="pill" data-text="blue cheese"><span class="pill-name">Blue Cheese</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">26%</span></div><div class="pill" data-text="grape drink"><span class="pill-name">Grape Drink</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="og kush"><span class="pill-name">OG Kush</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">25%</span></div><div class="pill" data-text="wedding cake"><span class="pill-name">Wedding Cake</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">26%</span></div><div class="pill" data-text="alien og"><span class="pill-name">Alien OG</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="cereal milk"><span class="pill-name">Cereal Milk</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">25%</span></div><div class="pill" data-text="headband"><span class="pill-name">Headband</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="jetfuel"><span class="pill-name">Jetfuel</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">30%</span></div><div class="pill" data-text="lemon cherry gelato"><span class="pill-name">Lemon Cherry Gelato</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="trop cherry"><span class="pill-name">Trop Cherry</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">30%</span></div></div>
   </div>
-  <img class="info-bullets" src="assets/info_strain_specific.png" alt="">
+  <div class="info-wrap"><img class="info-bullets" src="assets/info_strain_specific.png" alt=""></div>
 </section>
 <section class="sku sku-flower brand-PUFF" data-brand="PUFF" data-oos="0">
   <div class="hero">
-    <div class="cluster cluster-3"><img class="pkg pkg1" src="assets/sku_ss_14_lcg.png" alt="HALF GRAM 14-PACK"><img class="pkg pkg2" src="assets/sku_ss_14_okk.png" alt="HALF GRAM 14-PACK"><img class="pkg pkg3" src="assets/sku_ss_14_bd.png" alt="HALF GRAM 14-PACK"></div>
+    <div class="cluster cluster-3 cluster-box"><img class="pkg pkg1" src="assets/sku_ss_14_lcg.png" alt="HALF GRAM 14-PACK"><img class="pkg pkg2" src="assets/sku_ss_14_okk.png" alt="HALF GRAM 14-PACK"><img class="pkg pkg3" src="assets/sku_ss_14_bd.png" alt="HALF GRAM 14-PACK"></div>
     <div class="info">
       <div class="brandbar">
         <img class="brand-logo" src="assets/puff_logo.png" alt="PUFF">
@@ -230,13 +267,17 @@
       <h2 class="title">HALF GRAM 14-PACK</h2>
       <div class="case">(8 count case)</div>
       
-        <div class="price-split single">
+        <div class="price-split">
           <div class="pricebox pricebox-ws">
             <div class="plabel">WHOLESALE</div>
             <div class="pval">$15.99</div>
           </div>
+          <div class="pricebox pricebox-sale">
+            <div class="plabel">15% OFF</div>
+            <div class="pval">$13.59</div>
+          </div>
         </div>
-        <div class="pnote">*List price per unit</div>
+        <div class="pnote">*Spend $3K+ for sitewide 15% off · List price per unit</div>
     </div>
     <div class="tray-col">
       <img class="tray" src="assets/tray_1g_preroll.png" alt="HALF GRAM 14-PACK">
@@ -252,11 +293,11 @@
     </div>
     <div class="strain-grid"><div class="pill" data-text="blue dream"><span class="pill-name">Blue Dream</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">26%</span></div><div class="pill" data-text="lemonwreck"><span class="pill-name">Lemonwreck</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">26%</span></div><div class="pill" data-text="limesicle"><span class="pill-name">Limesicle</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="orange tree"><span class="pill-name">Orange Tree</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="sour diesel"><span class="pill-name">Sour Diesel</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="banana og"><span class="pill-name">Banana OG</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="blue cheese"><span class="pill-name">Blue Cheese</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="og kush"><span class="pill-name">OG Kush</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">24%</span></div><div class="pill" data-text="wedding cake"><span class="pill-name">Wedding Cake</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">26%</span></div><div class="pill" data-text="alien og"><span class="pill-name">Alien OG</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">25%</span></div><div class="pill" data-text="cereal milk"><span class="pill-name">Cereal Milk</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">26%</span></div><div class="pill" data-text="headband"><span class="pill-name">Headband</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="lemon cherry gelato"><span class="pill-name">Lemon Cherry Gelato</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="trop cherry"><span class="pill-name">Trop Cherry</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">30%</span></div></div>
   </div>
-  <img class="info-bullets" src="assets/info_strain_specific.png" alt="">
+  <div class="info-wrap"><img class="info-bullets" src="assets/info_strain_specific.png" alt=""></div>
 </section>
 <section class="sku sku-bubble_hash brand-PUFF" data-brand="PUFF" data-oos="0">
   <div class="hero">
-    <div class="cluster cluster-3"><img class="pkg pkg1" src="assets/sku_bh_1g_mg.png" alt="ONE GRAM PREROLL"><img class="pkg pkg2" src="assets/sku_bh_1g_dl.png" alt="ONE GRAM PREROLL"><img class="pkg pkg3" src="assets/sku_bh_1g_ho.png" alt="ONE GRAM PREROLL"></div>
+    <div class="cluster cluster-3 cluster-tube"><img class="pkg pkg1" src="assets/sku_bh_1g_mg.png" alt="ONE GRAM PREROLL"><img class="pkg pkg2" src="assets/sku_bh_1g_dl.png" alt="ONE GRAM PREROLL"><img class="pkg pkg3" src="assets/sku_bh_1g_ho.png" alt="ONE GRAM PREROLL"></div>
     <div class="info">
       <div class="brandbar">
         <img class="brand-logo" src="assets/puff_logo.png" alt="PUFF">
@@ -266,13 +307,17 @@
       <h2 class="title">ONE GRAM PREROLL</h2>
       <div class="case">(25 count case)</div>
       
-        <div class="price-split single">
+        <div class="price-split">
           <div class="pricebox pricebox-ws">
             <div class="plabel">WHOLESALE</div>
             <div class="pval">$4.49</div>
           </div>
+          <div class="pricebox pricebox-sale">
+            <div class="plabel">15% OFF</div>
+            <div class="pval">$3.82</div>
+          </div>
         </div>
-        <div class="pnote">*List price per unit</div>
+        <div class="pnote">*Spend $3K+ for sitewide 15% off · List price per unit</div>
     </div>
     <div class="tray-col">
       <img class="tray" src="assets/tray_1g_preroll.png" alt="ONE GRAM PREROLL">
@@ -286,13 +331,13 @@
       <span class="col-h col-h-thc">THC%</span>
       <span class="cnt">8 strains in stock</span>
     </div>
-    <div class="strain-grid"><div class="pill" data-text="horchata x strawberries and cream"><span class="pill-name">Horchata x Strawberries and Cream</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">39%</span></div><div class="pill" data-text="mule fuel x acapulco gold"><span class="pill-name">Mule Fuel x Acapulco Gold</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">33%</span></div><div class="pill" data-text="gush mintz x ice cream cake"><span class="pill-name">Gush Mintz x Ice Cream Cake</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">36%</span></div><div class="pill" data-text="hashburger x gmo"><span class="pill-name">Hashburger x GMO</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">38%</span></div><div class="pill" data-text="modified grapes x apples and bananas"><span class="pill-name">Modified Grapes x Apples and Bananas</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">39%</span></div><div class="pill" data-text="doughlato x chocolope"><span class="pill-name">Doughlato x Chocolope</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">33%</span></div><div class="pill" data-text="rainbow cookies x la kush cake"><span class="pill-name">Rainbow Cookies x LA Kush Cake</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">36%</span></div><div class="pill" data-text="super boof x zoap"><span class="pill-name">Super Boof x Zoap</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">34%</span></div></div>
+    <div class="strain-grid"><div class="pill" data-text="horchata x strawberries and cream"><span class="pill-name">Horchata x Strawberries and Cream</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">38%</span></div><div class="pill" data-text="mule fuel x acapulco gold"><span class="pill-name">Mule Fuel x Acapulco Gold</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">33%</span></div><div class="pill" data-text="gush mintz x ice cream cake"><span class="pill-name">Gush Mintz x Ice Cream Cake</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">36%</span></div><div class="pill" data-text="hashburger x gmo"><span class="pill-name">Hashburger x GMO</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">38%</span></div><div class="pill" data-text="modified grapes x apples and bananas"><span class="pill-name">Modified Grapes x Apples and Bananas</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">39%</span></div><div class="pill" data-text="doughlato x chocolope"><span class="pill-name">Doughlato x Chocolope</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">33%</span></div><div class="pill" data-text="rainbow cookies x la kush cake"><span class="pill-name">Rainbow Cookies x LA Kush Cake</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">36%</span></div><div class="pill" data-text="super boof x zoap"><span class="pill-name">Super Boof x Zoap</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">34%</span></div></div>
   </div>
-  <img class="info-bullets" src="assets/info_bubble_hash.png" alt="">
+  <div class="info-wrap"><img class="info-bullets" src="assets/info_bubble_hash.png" alt=""></div>
 </section>
 <section class="sku sku-bubble_hash brand-PUFF" data-brand="PUFF" data-oos="0">
   <div class="hero">
-    <div class="cluster cluster-3"><img class="pkg pkg1" src="assets/sku_bh_5pk_hb.png" alt="HALF GRAM 5-PACK"><img class="pkg pkg2" src="assets/sku_bh_5pk_dp.png" alt="HALF GRAM 5-PACK"><img class="pkg pkg3" src="assets/sku_bh_5pk_sb.png" alt="HALF GRAM 5-PACK"></div>
+    <div class="cluster cluster-3 cluster-pouch"><img class="pkg pkg1" src="assets/sku_bh_5pk_hb.png" alt="HALF GRAM 5-PACK"><img class="pkg pkg2" src="assets/sku_bh_5pk_dp.png" alt="HALF GRAM 5-PACK"><img class="pkg pkg3" src="assets/sku_bh_5pk_sb.png" alt="HALF GRAM 5-PACK"></div>
     <div class="info">
       <div class="brandbar">
         <img class="brand-logo" src="assets/puff_logo.png" alt="PUFF">
@@ -302,13 +347,17 @@
       <h2 class="title">HALF GRAM 5-PACK</h2>
       <div class="case">(10 count case)</div>
       
-        <div class="price-split single">
+        <div class="price-split">
           <div class="pricebox pricebox-ws">
             <div class="plabel">WHOLESALE</div>
             <div class="pval">$10.99</div>
           </div>
+          <div class="pricebox pricebox-sale">
+            <div class="plabel">15% OFF</div>
+            <div class="pval">$9.34</div>
+          </div>
         </div>
-        <div class="pnote">*List price per unit</div>
+        <div class="pnote">*Spend $3K+ for sitewide 15% off · List price per unit</div>
     </div>
     <div class="tray-col">
       <img class="tray" src="assets/tray_5pk_preroll.png" alt="HALF GRAM 5-PACK">
@@ -324,11 +373,11 @@
     </div>
     <div class="strain-grid"><div class="pill" data-text="horchata x strawberries and cream"><span class="pill-name">Horchata x Strawberries and Cream</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">38%</span></div><div class="pill" data-text="mule fuel x acapulco gold"><span class="pill-name">Mule Fuel x Acapulco Gold</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">33%</span></div><div class="pill" data-text="gush mintz x ice cream cake"><span class="pill-name">Gush Mintz x Ice Cream Cake</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">35%</span></div><div class="pill" data-text="hashburger x gmo"><span class="pill-name">Hashburger x GMO</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">38%</span></div><div class="pill" data-text="modified grapes x apples and bananas"><span class="pill-name">Modified Grapes x Apples and Bananas</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">39%</span></div><div class="pill" data-text="doughlato x chocolope"><span class="pill-name">Doughlato x Chocolope</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">33%</span></div><div class="pill" data-text="rainbow cookies x la kush cake"><span class="pill-name">Rainbow Cookies x LA Kush Cake</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">36%</span></div><div class="pill" data-text="super boof x zoap"><span class="pill-name">Super Boof x Zoap</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">34%</span></div></div>
   </div>
-  <img class="info-bullets" src="assets/info_bubble_hash.png" alt="">
+  <div class="info-wrap"><img class="info-bullets" src="assets/info_bubble_hash.png" alt=""></div>
 </section>
 <section class="sku sku-bubble_hash brand-PUFF" data-brand="PUFF" data-oos="0">
   <div class="hero">
-    <div class="cluster cluster-3"><img class="pkg pkg1" src="assets/sku_bh_14_mg.png" alt="HALF GRAM 14-PACK"><img class="pkg pkg2" src="assets/sku_bh_14_rc.png" alt="HALF GRAM 14-PACK"><img class="pkg pkg3" src="assets/sku_bh_14_mf.png" alt="HALF GRAM 14-PACK"></div>
+    <div class="cluster cluster-3 cluster-box"><img class="pkg pkg1" src="assets/sku_bh_14_mg.png" alt="HALF GRAM 14-PACK"><img class="pkg pkg2" src="assets/sku_bh_14_rc.png" alt="HALF GRAM 14-PACK"><img class="pkg pkg3" src="assets/sku_bh_14_mf.png" alt="HALF GRAM 14-PACK"></div>
     <div class="info">
       <div class="brandbar">
         <img class="brand-logo" src="assets/puff_logo.png" alt="PUFF">
@@ -338,13 +387,17 @@
       <h2 class="title">HALF GRAM 14-PACK</h2>
       <div class="case">(8 count case)</div>
       
-        <div class="price-split single">
+        <div class="price-split">
           <div class="pricebox pricebox-ws">
             <div class="plabel">WHOLESALE</div>
             <div class="pval">$25.99</div>
           </div>
+          <div class="pricebox pricebox-sale">
+            <div class="plabel">15% OFF</div>
+            <div class="pval">$22.09</div>
+          </div>
         </div>
-        <div class="pnote">*List price per unit</div>
+        <div class="pnote">*Spend $3K+ for sitewide 15% off · List price per unit</div>
     </div>
     <div class="tray-col">
       <img class="tray" src="assets/tray_1g_preroll.png" alt="HALF GRAM 14-PACK">
@@ -360,11 +413,11 @@
     </div>
     <div class="strain-grid"><div class="pill" data-text="mule fuel x acapulco gold"><span class="pill-name">Mule Fuel x Acapulco Gold</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">33%</span></div><div class="pill" data-text="gush mintz x ice cream cake"><span class="pill-name">Gush Mintz x Ice Cream Cake</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">31%</span></div><div class="pill" data-text="hashburger x gmo"><span class="pill-name">Hashburger x GMO</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">38%</span></div><div class="pill" data-text="modified grapes x apples and bananas"><span class="pill-name">Modified Grapes x Apples and Bananas</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">39%</span></div><div class="pill" data-text="doughlato x chocolope"><span class="pill-name">Doughlato x Chocolope</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">34%</span></div><div class="pill" data-text="rainbow cookies x la kush cake"><span class="pill-name">Rainbow Cookies x LA Kush Cake</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">36%</span></div><div class="pill" data-text="super boof x zoap"><span class="pill-name">Super Boof x Zoap</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">34%</span></div></div>
   </div>
-  <img class="info-bullets" src="assets/info_bubble_hash.png" alt="">
+  <div class="info-wrap"><img class="info-bullets" src="assets/info_bubble_hash.png" alt=""></div>
 </section>
 <section class="sku sku-diamond brand-PUFF" data-brand="PUFF" data-oos="0">
   <div class="hero">
-    <div class="cluster cluster-3"><img class="pkg pkg1" src="assets/sku_di_1g_bp.png" alt="ONE GRAM PREROLL"><img class="pkg pkg2" src="assets/sku_di_1g_td.png" alt="ONE GRAM PREROLL"><img class="pkg pkg3" src="assets/sku_di_1g_cl.png" alt="ONE GRAM PREROLL"></div>
+    <div class="cluster cluster-3 cluster-tube"><img class="pkg pkg1" src="assets/sku_di_1g_bp.png" alt="ONE GRAM PREROLL"><img class="pkg pkg2" src="assets/sku_di_1g_td.png" alt="ONE GRAM PREROLL"><img class="pkg pkg3" src="assets/sku_di_1g_cl.png" alt="ONE GRAM PREROLL"></div>
     <div class="info">
       <div class="brandbar">
         <img class="brand-logo" src="assets/puff_logo.png" alt="PUFF">
@@ -374,13 +427,17 @@
       <h2 class="title">ONE GRAM PREROLL</h2>
       <div class="case">(25 count case)</div>
       
-        <div class="price-split single">
+        <div class="price-split">
           <div class="pricebox pricebox-ws">
             <div class="plabel">WHOLESALE</div>
             <div class="pval">$4.99</div>
           </div>
+          <div class="pricebox pricebox-sale">
+            <div class="plabel">15% OFF</div>
+            <div class="pval">$4.24</div>
+          </div>
         </div>
-        <div class="pnote">*List price per unit</div>
+        <div class="pnote">*Spend $3K+ for sitewide 15% off · List price per unit</div>
     </div>
     <div class="tray-col">
       <img class="tray" src="assets/tray_1g_preroll.png" alt="ONE GRAM PREROLL">
@@ -394,13 +451,13 @@
       <span class="col-h col-h-thc">THC%</span>
       <span class="cnt">8 strains in stock</span>
     </div>
-    <div class="strain-grid"><div class="pill" data-text="blue dream"><span class="pill-name">Blue Dream</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">32%</span></div><div class="pill" data-text="lemon lime twist"><span class="pill-name">Lemon Lime Twist</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">36%</span></div><div class="pill" data-text="tangerine dream"><span class="pill-name">Tangerine Dream</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">39%</span></div><div class="pill" data-text="grapeness"><span class="pill-name">Grapeness</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">41%</span></div><div class="pill" data-text="watermelon z"><span class="pill-name">Watermelon Z</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">40%</span></div><div class="pill" data-text="cantaloupe kush"><span class="pill-name">Cantaloupe Kush</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">38%</span></div><div class="pill" data-text="cherry limeade"><span class="pill-name">Cherry Limeade</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">38%</span></div><div class="pill" data-text="strawberry banana smash"><span class="pill-name">Strawberry Banana Smash</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">40%</span></div></div>
+    <div class="strain-grid"><div class="pill" data-text="blue dream"><span class="pill-name">Blue Dream</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">32%</span></div><div class="pill" data-text="lemon lime twist"><span class="pill-name">Lemon Lime Twist</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">36%</span></div><div class="pill" data-text="tangerine dream"><span class="pill-name">Tangerine Dream</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">39%</span></div><div class="pill" data-text="grapeness"><span class="pill-name">Grapeness</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">40%</span></div><div class="pill" data-text="watermelon z"><span class="pill-name">Watermelon Z</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">40%</span></div><div class="pill" data-text="cantaloupe kush"><span class="pill-name">Cantaloupe Kush</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">38%</span></div><div class="pill" data-text="cherry limeade"><span class="pill-name">Cherry Limeade</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">38%</span></div><div class="pill" data-text="strawberry banana smash"><span class="pill-name">Strawberry Banana Smash</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">40%</span></div></div>
   </div>
-  <img class="info-bullets" src="assets/info_diamonds.png" alt="">
+  <div class="info-wrap"><img class="info-bullets" src="assets/info_diamonds.png" alt=""></div>
 </section>
 <section class="sku sku-diamond brand-PUFF" data-brand="PUFF" data-oos="0">
   <div class="hero">
-    <div class="cluster cluster-3"><img class="pkg pkg1" src="assets/sku_di_5pk_ck.jpg" alt="HALF GRAM 5-PACK"><img class="pkg pkg2" src="assets/sku_di_5pk_wz.jpg" alt="HALF GRAM 5-PACK"><img class="pkg pkg3" src="assets/sku_di_5pk_bd.jpg" alt="HALF GRAM 5-PACK"></div>
+    <div class="cluster cluster-3 cluster-pouch"><img class="pkg pkg1" src="assets/sku_di_5pk_ck.jpg" alt="HALF GRAM 5-PACK"><img class="pkg pkg2" src="assets/sku_di_5pk_wz.jpg" alt="HALF GRAM 5-PACK"><img class="pkg pkg3" src="assets/sku_di_5pk_bd.jpg" alt="HALF GRAM 5-PACK"></div>
     <div class="info">
       <div class="brandbar">
         <img class="brand-logo" src="assets/puff_logo.png" alt="PUFF">
@@ -410,13 +467,17 @@
       <h2 class="title">HALF GRAM 5-PACK</h2>
       <div class="case">(10 count case)</div>
       
-        <div class="price-split single">
+        <div class="price-split">
           <div class="pricebox pricebox-ws">
             <div class="plabel">WHOLESALE</div>
             <div class="pval">$12.49</div>
           </div>
+          <div class="pricebox pricebox-sale">
+            <div class="plabel">15% OFF</div>
+            <div class="pval">$10.62</div>
+          </div>
         </div>
-        <div class="pnote">*List price per unit</div>
+        <div class="pnote">*Spend $3K+ for sitewide 15% off · List price per unit</div>
     </div>
     <div class="tray-col">
       <img class="tray" src="assets/tray_5pk_preroll.png" alt="HALF GRAM 5-PACK">
@@ -428,15 +489,15 @@
       <span class="col-h">STRAIN</span>
       <span class="col-h col-h-dom">DOMINANCE</span>
       <span class="col-h col-h-thc">THC%</span>
-      <span class="cnt">8 strains in stock</span>
+      <span class="cnt">9 strains in stock</span>
     </div>
-    <div class="strain-grid"><div class="pill" data-text="lemon lime twist"><span class="pill-name">Lemon Lime Twist</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">39%</span></div><div class="pill" data-text="tangerine dream"><span class="pill-name">Tangerine Dream</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">39%</span></div><div class="pill" data-text="bubba peach"><span class="pill-name">Bubba Peach</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">37%</span></div><div class="pill" data-text="grapeness"><span class="pill-name">Grapeness</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">41%</span></div><div class="pill" data-text="watermelon z"><span class="pill-name">Watermelon Z</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">40%</span></div><div class="pill" data-text="cantaloupe kush"><span class="pill-name">Cantaloupe Kush</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">38%</span></div><div class="pill" data-text="cherry limeade"><span class="pill-name">Cherry Limeade</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">40%</span></div><div class="pill" data-text="strawberry banana smash"><span class="pill-name">Strawberry Banana Smash</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">38%</span></div></div>
+    <div class="strain-grid"><div class="pill" data-text="blue dream"><span class="pill-name">Blue Dream</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">32%</span></div><div class="pill" data-text="lemon lime twist"><span class="pill-name">Lemon Lime Twist</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">39%</span></div><div class="pill" data-text="tangerine dream"><span class="pill-name">Tangerine Dream</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">39%</span></div><div class="pill" data-text="bubba peach"><span class="pill-name">Bubba Peach</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">37%</span></div><div class="pill" data-text="grapeness"><span class="pill-name">Grapeness</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">41%</span></div><div class="pill" data-text="watermelon z"><span class="pill-name">Watermelon Z</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">40%</span></div><div class="pill" data-text="cantaloupe kush"><span class="pill-name">Cantaloupe Kush</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">38%</span></div><div class="pill" data-text="cherry limeade"><span class="pill-name">Cherry Limeade</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">40%</span></div><div class="pill" data-text="strawberry banana smash"><span class="pill-name">Strawberry Banana Smash</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">38%</span></div></div>
   </div>
-  <img class="info-bullets" src="assets/info_diamonds.png" alt="">
+  <div class="info-wrap"><img class="info-bullets" src="assets/info_diamonds.png" alt=""></div>
 </section>
 <section class="sku sku-diamond brand-PUFF" data-brand="PUFF" data-oos="0">
   <div class="hero">
-    <div class="cluster cluster-3"><img class="pkg pkg1" src="assets/sku_di_14_gn.png" alt="HALF GRAM 14-PACK"><img class="pkg pkg2" src="assets/sku_di_14_llt.png" alt="HALF GRAM 14-PACK"><img class="pkg pkg3" src="assets/sku_di_14_sbs.png" alt="HALF GRAM 14-PACK"></div>
+    <div class="cluster cluster-3 cluster-box"><img class="pkg pkg1" src="assets/sku_di_14_gn.png" alt="HALF GRAM 14-PACK"><img class="pkg pkg2" src="assets/sku_di_14_llt.png" alt="HALF GRAM 14-PACK"><img class="pkg pkg3" src="assets/sku_di_14_sbs.png" alt="HALF GRAM 14-PACK"></div>
     <div class="info">
       <div class="brandbar">
         <img class="brand-logo" src="assets/puff_logo.png" alt="PUFF">
@@ -446,13 +507,17 @@
       <h2 class="title">HALF GRAM 14-PACK</h2>
       <div class="case">(8 count case)</div>
       
-        <div class="price-split single">
+        <div class="price-split">
           <div class="pricebox pricebox-ws">
             <div class="plabel">WHOLESALE</div>
             <div class="pval">$29.99</div>
           </div>
+          <div class="pricebox pricebox-sale">
+            <div class="plabel">15% OFF</div>
+            <div class="pval">$25.49</div>
+          </div>
         </div>
-        <div class="pnote">*List price per unit</div>
+        <div class="pnote">*Spend $3K+ for sitewide 15% off · List price per unit</div>
     </div>
     <div class="tray-col">
       <img class="tray" src="assets/tray_1g_preroll.png" alt="HALF GRAM 14-PACK">
@@ -468,7 +533,7 @@
     </div>
     <div class="strain-grid"><div class="pill" data-text="lemon lime twist"><span class="pill-name">Lemon Lime Twist</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">36%</span></div><div class="pill" data-text="tangerine dream"><span class="pill-name">Tangerine Dream</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">37%</span></div><div class="pill" data-text="bubba peach"><span class="pill-name">Bubba Peach</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">37%</span></div><div class="pill" data-text="grapeness"><span class="pill-name">Grapeness</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">40%</span></div><div class="pill" data-text="watermelon z"><span class="pill-name">Watermelon Z</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">40%</span></div><div class="pill" data-text="cantaloupe kush"><span class="pill-name">Cantaloupe Kush</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">38%</span></div><div class="pill" data-text="cherry limeade"><span class="pill-name">Cherry Limeade</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">40%</span></div><div class="pill" data-text="strawberry banana smash"><span class="pill-name">Strawberry Banana Smash</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">40%</span></div></div>
   </div>
-  <img class="info-bullets" src="assets/info_diamonds.png" alt="">
+  <div class="info-wrap"><img class="info-bullets" src="assets/info_diamonds.png" alt=""></div>
 </section>
   <div class="section-head" style="margin-top:60px">
     <img src="assets/wct_logo.png" alt="WCT">
@@ -477,7 +542,7 @@
   </div>
 <section class="sku sku-wct_smallz brand-WCT" data-brand="WCT" data-oos="0">
   <div class="hero">
-    <div class="cluster cluster-1"><img class="pkg pkg1" src="assets/wct_smallz_eighth.jpg" alt="SMALLZ EIGHTH"></div>
+    <div class="cluster cluster-1 cluster-bag"><img class="pkg pkg1" src="assets/wct_smallz_eighth.jpg" alt="SMALLZ EIGHTH"></div>
     <div class="info">
       <div class="brandbar">
         <img class="brand-logo" src="assets/wct_logo.png" alt="WCT">
@@ -493,11 +558,11 @@
             <div class="pval">$5.50</div>
           </div>
           <div class="pricebox pricebox-sale">
-            <div class="plabel">UP TO 50% OFF</div>
-            <div class="pval">$2.75</div>
+            <div class="plabel">15% OFF</div>
+            <div class="pval">$4.67</div>
           </div>
         </div>
-        <div class="pnote">*Aging discount — as low as $2.75</div>
+        <div class="pnote">*Spend $3K+ for sitewide 15% off · List price per unit</div>
     </div>
     <div class="tray-col">
       <img class="tray" src="assets/wct_smallz_hero.png" alt="SMALLZ EIGHTH">
@@ -509,15 +574,15 @@
       <span class="col-h">STRAIN</span>
       <span class="col-h col-h-dom">DOMINANCE</span>
       <span class="col-h col-h-thc">THC%</span>
-      <span class="cnt">30 strains in stock</span>
+      <span class="cnt">24 strains in stock</span>
     </div>
-    <div class="strain-grid"><div class="pill" data-text="5 alive"><span class="pill-name">5 Alive</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">25%</span></div><div class="pill" data-text="blue dream"><span class="pill-name">Blue Dream</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">29%</span></div><div class="pill" data-text="blue dream"><span class="pill-name">Blue Dream</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">30%</span></div><div class="pill" data-text="chem d"><span class="pill-name">Chem D</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">31%</span></div><div class="pill" data-text="golden lemons"><span class="pill-name">Golden Lemons</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">30%</span></div><div class="pill" data-text="pineapple express"><span class="pill-name">Pineapple Express</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="sour diesel"><span class="pill-name">Sour Diesel</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">25%</span><span class="pill-was">$5.50</span><span class="pill-now">$2.75</span><span class="pill-sale">50% OFF</span></div><div class="pill" data-text="sugar spritzer"><span class="pill-name">Sugar Spritzer</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">29%</span></div><div class="pill" data-text="super lemon haze"><span class="pill-name">Super Lemon Haze</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="blueberry crumble"><span class="pill-name">Blueberry Crumble</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">25%</span><span class="pill-was">$5.50</span><span class="pill-now">$2.75</span><span class="pill-sale">50% OFF</span></div><div class="pill" data-text="blueberry crumble"><span class="pill-name">Blueberry Crumble</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">31%</span><span class="pill-was">$5.50</span><span class="pill-now">$3.08</span><span class="pill-sale">44% OFF</span></div><div class="pill" data-text="cherry warheadz"><span class="pill-name">Cherry Warheadz</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">30%</span></div><div class="pill" data-text="cherry warheadz"><span class="pill-name">Cherry Warheadz</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">30%</span></div><div class="pill" data-text="dulce de leche"><span class="pill-name">Dulce De Leche</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">32%</span></div><div class="pill" data-text="gmo"><span class="pill-name">GMO</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">26%</span></div><div class="pill" data-text="gmo"><span class="pill-name">GMO</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">31%</span></div><div class="pill" data-text="hashburger"><span class="pill-name">Hashburger</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">33%</span></div><div class="pill" data-text="hashburger"><span class="pill-name">Hashburger</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">33%</span></div><div class="pill" data-text="king louis"><span class="pill-name">King Louis</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">29%</span><span class="pill-was">$5.50</span><span class="pill-now">$2.75</span><span class="pill-sale">50% OFF</span></div><div class="pill" data-text="rainbow cookie"><span class="pill-name">Rainbow Cookie</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">25%</span></div><div class="pill" data-text="sugar bomb"><span class="pill-name">Sugar Bomb</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="tropicana gushers"><span class="pill-name">Tropicana Gushers</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">25%</span><span class="pill-was">$5.50</span><span class="pill-now">$2.75</span><span class="pill-sale">50% OFF</span></div><div class="pill" data-text="almond mochi"><span class="pill-name">Almond Mochi</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="amaretto di limon"><span class="pill-name">Amaretto Di Limon</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">31%</span></div><div class="pill" data-text="e85"><span class="pill-name">E85</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">29%</span><span class="pill-was">$5.50</span><span class="pill-now">$3.74</span><span class="pill-sale">32% OFF</span></div><div class="pill" data-text="fire og"><span class="pill-name">Fire OG</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">33%</span></div><div class="pill" data-text="grape gas"><span class="pill-name">Grape Gas</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">31%</span></div><div class="pill" data-text="lemon gas"><span class="pill-name">Lemon Gas</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">32%</span></div><div class="pill" data-text="tropicana cherry"><span class="pill-name">Tropicana Cherry</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">28%</span><span class="pill-was">$5.50</span><span class="pill-now">$2.75</span><span class="pill-sale">50% OFF</span></div><div class="pill" data-text="watermelon warhead"><span class="pill-name">Watermelon Warhead</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">24%</span><span class="pill-was">$5.50</span><span class="pill-now">$2.75</span><span class="pill-sale">50% OFF</span></div></div>
+    <div class="strain-grid"><div class="pill" data-text="5 alive"><span class="pill-name">5 Alive</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">25%</span></div><div class="pill" data-text="blue dream"><span class="pill-name">Blue Dream</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">30%</span></div><div class="pill" data-text="chem d"><span class="pill-name">Chem D</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">31%</span></div><div class="pill" data-text="golden lemons"><span class="pill-name">Golden Lemons</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">30%</span></div><div class="pill" data-text="sour diesel"><span class="pill-name">Sour Diesel</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">25%</span></div><div class="pill" data-text="sugar spritzer"><span class="pill-name">Sugar Spritzer</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">29%</span></div><div class="pill" data-text="super lemon haze"><span class="pill-name">Super Lemon Haze</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="blueberry crumble"><span class="pill-name">Blueberry Crumble</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">31%</span></div><div class="pill" data-text="cherry warheadz"><span class="pill-name">Cherry Warheadz</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">30%</span></div><div class="pill" data-text="dulce de leche"><span class="pill-name">Dulce De Leche</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">32%</span></div><div class="pill" data-text="gmo"><span class="pill-name">GMO</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">31%</span></div><div class="pill" data-text="hashburger"><span class="pill-name">Hashburger</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">33%</span></div><div class="pill" data-text="king louis"><span class="pill-name">King Louis</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">29%</span></div><div class="pill" data-text="rainbow cookie"><span class="pill-name">Rainbow Cookie</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">25%</span></div><div class="pill" data-text="tropicana gushers"><span class="pill-name">Tropicana Gushers</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">25%</span></div><div class="pill" data-text="almond mochi"><span class="pill-name">Almond Mochi</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="amaretto di limon"><span class="pill-name">Amaretto Di Limon</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">31%</span></div><div class="pill" data-text="e85"><span class="pill-name">E85</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">29%</span></div><div class="pill" data-text="fire og"><span class="pill-name">Fire OG</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">33%</span></div><div class="pill" data-text="grape gas"><span class="pill-name">Grape Gas</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">31%</span></div><div class="pill" data-text="lemon gas"><span class="pill-name">Lemon Gas</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">32%</span></div><div class="pill" data-text="slapz"><span class="pill-name">Slapz</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="tropicana cherry"><span class="pill-name">Tropicana Cherry</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">28%</span></div><div class="pill" data-text="watermelon warhead"><span class="pill-name">Watermelon Warhead</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">24%</span></div></div>
   </div>
   
 </section>
 <section class="sku sku-wct_smallz brand-WCT" data-brand="WCT" data-oos="0">
   <div class="hero">
-    <div class="cluster cluster-1"><img class="pkg pkg1" src="assets/wct_smallz_half.jpg" alt="SMALLZ HALF OZ"></div>
+    <div class="cluster cluster-1 cluster-bag"><img class="pkg pkg1" src="assets/wct_smallz_half.jpg" alt="SMALLZ HALF OZ"></div>
     <div class="info">
       <div class="brandbar">
         <img class="brand-logo" src="assets/wct_logo.png" alt="WCT">
@@ -527,13 +592,17 @@
       <h2 class="title">SMALLZ HALF OZ</h2>
       <div class="case">14g Sealed Pouch</div>
       
-        <div class="price-split single">
+        <div class="price-split">
           <div class="pricebox pricebox-ws">
             <div class="plabel">WHOLESALE</div>
             <div class="pval">$19.75</div>
           </div>
+          <div class="pricebox pricebox-sale">
+            <div class="plabel">15% OFF</div>
+            <div class="pval">$16.79</div>
+          </div>
         </div>
-        <div class="pnote">*List price per unit</div>
+        <div class="pnote">*Spend $3K+ for sitewide 15% off · List price per unit</div>
     </div>
     <div class="tray-col">
       <img class="tray" src="assets/wct_smallz_hero.png" alt="SMALLZ HALF OZ">
@@ -545,15 +614,15 @@
       <span class="col-h">STRAIN</span>
       <span class="col-h col-h-dom">DOMINANCE</span>
       <span class="col-h col-h-thc">THC%</span>
-      <span class="cnt">27 strains in stock</span>
+      <span class="cnt">26 strains in stock</span>
     </div>
-    <div class="strain-grid"><div class="pill" data-text="5 alive"><span class="pill-name">5 Alive</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">25%</span></div><div class="pill" data-text="blue dream"><span class="pill-name">Blue Dream</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">29%</span></div><div class="pill" data-text="chem d"><span class="pill-name">Chem D</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">31%</span></div><div class="pill" data-text="pineapple express"><span class="pill-name">Pineapple Express</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="sugar spritzer"><span class="pill-name">Sugar Spritzer</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">29%</span></div><div class="pill" data-text="super lemon haze"><span class="pill-name">Super Lemon Haze</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="blue z"><span class="pill-name">Blue Z</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="blue zushi"><span class="pill-name">Blue Zushi</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="cherry warheadz"><span class="pill-name">Cherry Warheadz</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">30%</span></div><div class="pill" data-text="dulce de leche"><span class="pill-name">Dulce De Leche</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">32%</span></div><div class="pill" data-text="face mintz"><span class="pill-name">Face Mintz</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">29%</span></div><div class="pill" data-text="fatso"><span class="pill-name">Fatso</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">32%</span></div><div class="pill" data-text="gmo"><span class="pill-name">GMO</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="hashburger"><span class="pill-name">Hashburger</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">33%</span></div><div class="pill" data-text="modified sunset"><span class="pill-name">Modified Sunset</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">32%</span></div><div class="pill" data-text="motor breath"><span class="pill-name">Motor Breath</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">32%</span></div><div class="pill" data-text="rainbow cookie"><span class="pill-name">Rainbow Cookie</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">31%</span></div><div class="pill" data-text="sugar bomb"><span class="pill-name">Sugar Bomb</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="almond mochi"><span class="pill-name">Almond Mochi</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="amaretto di limon"><span class="pill-name">Amaretto Di Limon</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">31%</span></div><div class="pill" data-text="e85"><span class="pill-name">E85</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">29%</span></div><div class="pill" data-text="fire og"><span class="pill-name">Fire OG</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">33%</span></div><div class="pill" data-text="gg4"><span class="pill-name">GG4</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">34%</span></div><div class="pill" data-text="lemon gas"><span class="pill-name">Lemon Gas</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">32%</span></div><div class="pill" data-text="pink runtz 2.0"><span class="pill-name">Pink Runtz 2.0</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">26%</span></div><div class="pill" data-text="slapz"><span class="pill-name">Slapz</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="watermelon warhead"><span class="pill-name">Watermelon Warhead</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">24%</span></div></div>
+    <div class="strain-grid"><div class="pill" data-text="5 alive"><span class="pill-name">5 Alive</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">25%</span></div><div class="pill" data-text="blue dream"><span class="pill-name">Blue Dream</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">29%</span></div><div class="pill" data-text="chem d"><span class="pill-name">Chem D</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">31%</span></div><div class="pill" data-text="pineapple express"><span class="pill-name">Pineapple Express</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="sugar spritzer"><span class="pill-name">Sugar Spritzer</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">29%</span></div><div class="pill" data-text="super lemon haze"><span class="pill-name">Super Lemon Haze</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="blue z"><span class="pill-name">Blue Z</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="blue zushi"><span class="pill-name">Blue Zushi</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="cherry warheadz"><span class="pill-name">Cherry Warheadz</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">30%</span></div><div class="pill" data-text="dulce de leche"><span class="pill-name">Dulce De Leche</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">32%</span></div><div class="pill" data-text="face mintz"><span class="pill-name">Face Mintz</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">29%</span></div><div class="pill" data-text="fatso"><span class="pill-name">Fatso</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">32%</span></div><div class="pill" data-text="gmo"><span class="pill-name">GMO</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="modified sunset"><span class="pill-name">Modified Sunset</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">32%</span></div><div class="pill" data-text="motor breath"><span class="pill-name">Motor Breath</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">32%</span></div><div class="pill" data-text="rainbow cookie"><span class="pill-name">Rainbow Cookie</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">31%</span></div><div class="pill" data-text="sugar bomb"><span class="pill-name">Sugar Bomb</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="almond mochi"><span class="pill-name">Almond Mochi</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="amaretto di limon"><span class="pill-name">Amaretto Di Limon</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">31%</span></div><div class="pill" data-text="e85"><span class="pill-name">E85</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">29%</span></div><div class="pill" data-text="fire og"><span class="pill-name">Fire OG</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">33%</span></div><div class="pill" data-text="gg4"><span class="pill-name">GG4</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">34%</span></div><div class="pill" data-text="lemon gas"><span class="pill-name">Lemon Gas</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">32%</span></div><div class="pill" data-text="pink runtz 2.0"><span class="pill-name">Pink Runtz 2.0</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">26%</span></div><div class="pill" data-text="slapz"><span class="pill-name">Slapz</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="watermelon warhead"><span class="pill-name">Watermelon Warhead</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">24%</span></div></div>
   </div>
   
 </section>
 <section class="sku sku-wct_classics brand-WCT" data-brand="WCT" data-oos="0">
   <div class="hero">
-    <div class="cluster cluster-1"><img class="pkg pkg1" src="assets/wct_classics_eighth.jpg" alt="CLASSICS EIGHTH"></div>
+    <div class="cluster cluster-1 cluster-bag"><img class="pkg pkg1" src="assets/wct_classics_eighth.jpg" alt="CLASSICS EIGHTH"></div>
     <div class="info">
       <div class="brandbar">
         <img class="brand-logo" src="assets/wct_logo.png" alt="WCT">
@@ -563,13 +632,17 @@
       <h2 class="title">CLASSICS EIGHTH</h2>
       <div class="case">3.5g Sealed Pouch</div>
       
-        <div class="price-split single">
+        <div class="price-split">
           <div class="pricebox pricebox-ws">
             <div class="plabel">WHOLESALE</div>
             <div class="pval">$6.25</div>
           </div>
+          <div class="pricebox pricebox-sale">
+            <div class="plabel">15% OFF</div>
+            <div class="pval">$5.31</div>
+          </div>
         </div>
-        <div class="pnote">*List price per unit</div>
+        <div class="pnote">*Spend $3K+ for sitewide 15% off · List price per unit</div>
     </div>
     <div class="tray-col">
       <img class="tray" src="assets/wct_classics_hero.png" alt="CLASSICS EIGHTH">
@@ -581,15 +654,15 @@
       <span class="col-h">STRAIN</span>
       <span class="col-h col-h-dom">DOMINANCE</span>
       <span class="col-h col-h-thc">THC%</span>
-      <span class="cnt">14 strains in stock</span>
+      <span class="cnt">13 strains in stock</span>
     </div>
-    <div class="strain-grid"><div class="pill" data-text="5 alive"><span class="pill-name">5 Alive</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">27%</span></div><div class="pill" data-text="bolo runtz"><span class="pill-name">Bolo Runtz</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="emerald runtz"><span class="pill-name">Emerald Runtz</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">25%</span></div><div class="pill" data-text="gmo"><span class="pill-name">GMO</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">32%</span></div><div class="pill" data-text="king louis"><span class="pill-name">King Louis</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="presidential kush"><span class="pill-name">Presidential Kush</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="romulan"><span class="pill-name">Romulan</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="cereal milk"><span class="pill-name">Cereal Milk</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">26%</span></div><div class="pill" data-text="e85"><span class="pill-name">E85</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="governmint oasis"><span class="pill-name">Governmint Oasis</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="oakland lcg"><span class="pill-name">Oakland LCG</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">29%</span></div><div class="pill" data-text="sherbhead"><span class="pill-name">SherbHead</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">26%</span></div><div class="pill" data-text="super runtz"><span class="pill-name">Super Runtz</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="white widow"><span class="pill-name">White Widow</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">31%</span></div></div>
+    <div class="strain-grid"><div class="pill" data-text="cherry diesel"><span class="pill-name">Cherry Diesel</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="bolo runtz"><span class="pill-name">Bolo Runtz</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="emerald runtz"><span class="pill-name">Emerald Runtz</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">25%</span></div><div class="pill" data-text="gmo"><span class="pill-name">GMO</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">32%</span></div><div class="pill" data-text="king louis"><span class="pill-name">King Louis</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="presidential kush"><span class="pill-name">Presidential Kush</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="romulan"><span class="pill-name">Romulan</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="cereal milk"><span class="pill-name">Cereal Milk</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">26%</span></div><div class="pill" data-text="e85"><span class="pill-name">E85</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="governmint oasis"><span class="pill-name">Governmint Oasis</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="oakland lcg"><span class="pill-name">Oakland LCG</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">29%</span></div><div class="pill" data-text="sherbhead"><span class="pill-name">SherbHead</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">26%</span></div><div class="pill" data-text="super runtz"><span class="pill-name">Super Runtz</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div></div>
   </div>
   
 </section>
 <section class="sku sku-wct_classics brand-WCT" data-brand="WCT" data-oos="0">
   <div class="hero">
-    <div class="cluster cluster-1"><img class="pkg pkg1" src="assets/wct_classics_half.jpg" alt="CLASSICS HALF OZ"></div>
+    <div class="cluster cluster-1 cluster-bag"><img class="pkg pkg1" src="assets/wct_classics_half.jpg" alt="CLASSICS HALF OZ"></div>
     <div class="info">
       <div class="brandbar">
         <img class="brand-logo" src="assets/wct_logo.png" alt="WCT">
@@ -599,13 +672,17 @@
       <h2 class="title">CLASSICS HALF OZ</h2>
       <div class="case">14g Sealed Pouch</div>
       
-        <div class="price-split single">
+        <div class="price-split">
           <div class="pricebox pricebox-ws">
             <div class="plabel">WHOLESALE</div>
             <div class="pval">$21.95</div>
           </div>
+          <div class="pricebox pricebox-sale">
+            <div class="plabel">15% OFF</div>
+            <div class="pval">$18.66</div>
+          </div>
         </div>
-        <div class="pnote">*List price per unit</div>
+        <div class="pnote">*Spend $3K+ for sitewide 15% off · List price per unit</div>
     </div>
     <div class="tray-col">
       <img class="tray" src="assets/wct_classics_hero.png" alt="CLASSICS HALF OZ">
@@ -617,15 +694,15 @@
       <span class="col-h">STRAIN</span>
       <span class="col-h col-h-dom">DOMINANCE</span>
       <span class="col-h col-h-thc">THC%</span>
-      <span class="cnt">10 strains in stock</span>
+      <span class="cnt">7 strains in stock</span>
     </div>
-    <div class="strain-grid"><div class="pill" data-text="emerald runtz"><span class="pill-name">Emerald Runtz</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">25%</span></div><div class="pill" data-text="gmo"><span class="pill-name">GMO</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">32%</span></div><div class="pill" data-text="romulan"><span class="pill-name">Romulan</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">28%</span></div><div class="pill" data-text="blue crunch berriez"><span class="pill-name">Blue Crunch Berriez</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">34%</span></div><div class="pill" data-text="cereal milk"><span class="pill-name">Cereal Milk</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">24%</span></div><div class="pill" data-text="e85"><span class="pill-name">E85</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="pink certz"><span class="pill-name">Pink Certz</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">29%</span></div><div class="pill" data-text="pink runtz 2.0"><span class="pill-name">Pink Runtz 2.0</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">30%</span></div><div class="pill" data-text="super runtz"><span class="pill-name">Super Runtz</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="white widow"><span class="pill-name">White Widow</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">31%</span></div></div>
+    <div class="strain-grid"><div class="pill" data-text="emerald runtz"><span class="pill-name">Emerald Runtz</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">25%</span></div><div class="pill" data-text="gmo"><span class="pill-name">GMO</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">32%</span></div><div class="pill" data-text="grapescotti"><span class="pill-name">Grapescotti</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">35%</span></div><div class="pill" data-text="e85"><span class="pill-name">E85</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="pink certz"><span class="pill-name">Pink Certz</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">29%</span></div><div class="pill" data-text="super runtz"><span class="pill-name">Super Runtz</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">27%</span></div><div class="pill" data-text="white widow"><span class="pill-name">White Widow</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">31%</span></div></div>
   </div>
   
 </section>
 <section class="sku sku-wct_preroll brand-WCT" data-brand="WCT" data-oos="0">
   <div class="hero">
-    <div class="cluster cluster-3"><img class="pkg pkg1" src="assets/wct_preroll_tube1.png" alt="ONE GRAM PREROLL"><img class="pkg pkg2" src="assets/wct_preroll_tube2.png" alt="ONE GRAM PREROLL"><img class="pkg pkg3" src="assets/wct_preroll_tube3.png" alt="ONE GRAM PREROLL"></div>
+    <div class="cluster cluster-3 cluster-tube"><img class="pkg pkg1" src="assets/wct_preroll_tube1.png" alt="ONE GRAM PREROLL"><img class="pkg pkg2" src="assets/wct_preroll_tube2.png" alt="ONE GRAM PREROLL"><img class="pkg pkg3" src="assets/wct_preroll_tube3.png" alt="ONE GRAM PREROLL"></div>
     <div class="info">
       <div class="brandbar">
         <img class="brand-logo" src="assets/wct_logo.png" alt="WCT">
@@ -635,13 +712,17 @@
       <h2 class="title">ONE GRAM PREROLL</h2>
       <div class="case">(25 count case)</div>
       
-        <div class="price-split single">
+        <div class="price-split">
           <div class="pricebox pricebox-ws">
             <div class="plabel">WHOLESALE</div>
             <div class="pval">$1.70</div>
           </div>
+          <div class="pricebox pricebox-sale">
+            <div class="plabel">15% OFF</div>
+            <div class="pval">$1.44</div>
+          </div>
         </div>
-        <div class="pnote">*List price per unit</div>
+        <div class="pnote">*Spend $3K+ for sitewide 15% off · List price per unit</div>
     </div>
     <div class="tray-col">
       <img class="tray" src="assets/wct_preroll_hero.png" alt="ONE GRAM PREROLL">
@@ -661,7 +742,7 @@
 </section>
 <section class="sku sku-wct_preroll brand-WCT" data-brand="WCT" data-oos="0">
   <div class="hero">
-    <div class="cluster cluster-1"><img class="pkg pkg1" src="assets/wct_preroll_box.jpg" alt="1G PREROLL BULK"></div>
+    <div class="cluster cluster-1 cluster-tube"><img class="pkg pkg1" src="assets/wct_preroll_box.jpg" alt="1G PREROLL BULK"></div>
     <div class="info">
       <div class="brandbar">
         <img class="brand-logo" src="assets/wct_logo.png" alt="WCT">
@@ -671,13 +752,17 @@
       <h2 class="title">1G PREROLL BULK</h2>
       <div class="case">(250 count case)</div>
       
-        <div class="price-split single">
+        <div class="price-split">
           <div class="pricebox pricebox-ws">
             <div class="plabel">WHOLESALE</div>
             <div class="pval">$1.40</div>
           </div>
+          <div class="pricebox pricebox-sale">
+            <div class="plabel">15% OFF</div>
+            <div class="pval">$1.19</div>
+          </div>
         </div>
-        <div class="pnote">*List price per unit</div>
+        <div class="pnote">*Spend $3K+ for sitewide 15% off · List price per unit</div>
     </div>
     <div class="tray-col">
       <img class="tray" src="assets/wct_preroll_hero.png" alt="1G PREROLL BULK">
@@ -697,7 +782,7 @@
 </section>
 <section class="sku sku-wct_vape brand-WCT" data-brand="WCT" data-oos="0">
   <div class="hero">
-    <div class="cluster cluster-3"><img class="pkg pkg1" src="assets/wct_vape_tw.jpg" alt="1G VAPE CARTRIDGE"><img class="pkg pkg2" src="assets/wct_vape_gsc.jpg" alt="1G VAPE CARTRIDGE"><img class="pkg pkg3" src="assets/wct_vape_bk.jpg" alt="1G VAPE CARTRIDGE"></div>
+    <div class="cluster cluster-3 cluster-vape"><img class="pkg pkg1" src="assets/wct_vape_tw.jpg" alt="1G VAPE CARTRIDGE"><img class="pkg pkg2" src="assets/wct_vape_gsc.jpg" alt="1G VAPE CARTRIDGE"><img class="pkg pkg3" src="assets/wct_vape_bk.jpg" alt="1G VAPE CARTRIDGE"></div>
     <div class="info">
       <div class="brandbar">
         <img class="brand-logo" src="assets/wct_logo.png" alt="WCT">
@@ -707,13 +792,17 @@
       <h2 class="title">1G VAPE CARTRIDGE</h2>
       <div class="case">510-thread · West Coast Advisory</div>
       
-        <div class="price-split single">
+        <div class="price-split">
           <div class="pricebox pricebox-ws">
             <div class="plabel">WHOLESALE</div>
             <div class="pval">$7.49</div>
           </div>
+          <div class="pricebox pricebox-sale">
+            <div class="plabel">15% OFF</div>
+            <div class="pval">$6.37</div>
+          </div>
         </div>
-        <div class="pnote">*List price per unit</div>
+        <div class="pnote">*Spend $3K+ for sitewide 15% off · List price per unit</div>
     </div>
     <div class="tray-col">
       <img class="tray" src="assets/wct_vape_hero.png" alt="1G VAPE CARTRIDGE">
@@ -733,7 +822,7 @@
 </section>
 <section class="sku sku-wct_preroll brand-WCT" data-brand="WCT" data-oos="0">
   <div class="hero">
-    <div class="cluster cluster-1"><img class="pkg pkg1" src="assets/wct_preroll_box.jpg" alt="1G PREROLL 14-CT JAR"></div>
+    <div class="cluster cluster-1 cluster-tube"><img class="pkg pkg1" src="assets/wct_preroll_box.jpg" alt="1G PREROLL 14-CT JAR"></div>
     <div class="info">
       <div class="brandbar">
         <img class="brand-logo" src="assets/wct_logo.png" alt="WCT">
@@ -743,13 +832,17 @@
       <h2 class="title">1G PREROLL 14-CT JAR</h2>
       <div class="case">(14 count jar)</div>
       
-        <div class="price-split single">
+        <div class="price-split">
           <div class="pricebox pricebox-ws">
             <div class="plabel">WHOLESALE</div>
             <div class="pval">$15.95</div>
           </div>
+          <div class="pricebox pricebox-sale">
+            <div class="plabel">15% OFF</div>
+            <div class="pval">$13.56</div>
+          </div>
         </div>
-        <div class="pnote">*List price per unit</div>
+        <div class="pnote">*Spend $3K+ for sitewide 15% off · List price per unit</div>
     </div>
     <div class="tray-col">
       <img class="tray" src="assets/wct_preroll_hero.png" alt="1G PREROLL 14-CT JAR">
