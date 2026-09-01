@@ -41,48 +41,39 @@
   .sku[data-oos="1"]{opacity:.72}
   .sku[data-oos="1"]::before{content:"CURRENTLY OUT OF STOCK";position:absolute;top:12px;right:16px;background:#7a2222;color:#fff;font-size:10px;font-weight:800;letter-spacing:1px;border-radius:6px;padding:5px 10px;z-index:2}
 
-  .hero{display:grid;grid-template-columns:1.05fr 1.15fr .95fr;gap:16px;align-items:center}
+  .hero{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:20px;align-items:center;min-height:360px}
 
-  /* left cluster: overlapping product mockups */
-  .cluster{position:relative;height:280px;display:flex;justify-content:center;align-items:center}
+  /* Every cluster uses the same height so cards line up down the page.
+     Images use object-fit:contain, so 3-image clusters center via absolute
+     positioning (below) and single-image ones center via flex (parent). */
+  .cluster{position:relative;height:340px;display:flex;justify-content:center;align-items:center;padding:6px}
   .cluster img{max-width:38%;max-height:100%;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(0,0,0,.22));border-radius:6px}
   .cluster-3 img{position:absolute;transition:transform .3s}
-  .cluster-3 .pkg1{left:2%;top:12%;transform:rotate(-6deg);z-index:1}
-  .cluster-3 .pkg2{left:26%;top:0%;transform:rotate(0deg);z-index:2}
-  .cluster-3 .pkg3{left:54%;top:12%;transform:rotate(7deg);z-index:1}
-  .cluster-1 img{max-width:78%;max-height:100%}
 
-  /* Pouch cluster (5-pack): larger mockups, tighter overlap so they fill the space */
-  .cluster-pouch{height:360px}
-  .cluster-pouch img{max-width:54%;max-height:98%;border-radius:8px}
-  .cluster-pouch.cluster-3 .pkg1{left:-4%;top:8%;transform:rotate(-10deg);z-index:1}
-  .cluster-pouch.cluster-3 .pkg2{left:23%;top:-4%;transform:rotate(0deg);z-index:3}
-  .cluster-pouch.cluster-3 .pkg3{left:50%;top:8%;transform:rotate(10deg);z-index:2}
+  /* 3-image spreads. Middle piece is centered (left = 50% - imgWidth/2).
+     Outer pieces sit symmetrically on either side and tilt outward. */
+  .cluster-pouch img{max-width:52%;max-height:96%;border-radius:8px}
+  .cluster-pouch.cluster-3 .pkg1{left:-2%;top:6%;transform:rotate(-10deg);z-index:1}
+  .cluster-pouch.cluster-3 .pkg2{left:24%;top:-2%;transform:rotate(0deg);z-index:3}
+  .cluster-pouch.cluster-3 .pkg3{left:50%;top:6%;transform:rotate(10deg);z-index:2}
 
-  /* Tube cluster (1G prerolls): tall thin tubes need more vertical room */
-  .cluster-tube{height:360px}
-  .cluster-tube img{max-width:36%;max-height:100%}
-  .cluster-tube.cluster-3 .pkg1{left:0%;top:8%;transform:rotate(-10deg);z-index:1}
-  .cluster-tube.cluster-3 .pkg2{left:32%;top:-4%;transform:rotate(0deg);z-index:3}
-  .cluster-tube.cluster-3 .pkg3{left:64%;top:8%;transform:rotate(10deg);z-index:2}
+  .cluster-tube img{max-width:32%;max-height:96%}
+  .cluster-tube.cluster-3 .pkg1{left:6%;top:6%;transform:rotate(-10deg);z-index:1}
+  .cluster-tube.cluster-3 .pkg2{left:34%;top:-2%;transform:rotate(0deg);z-index:3}
+  .cluster-tube.cluster-3 .pkg3{left:62%;top:6%;transform:rotate(10deg);z-index:2}
 
-  /* Box cluster (14-pack): shorter, wider mockups */
-  .cluster-box{height:300px}
-  .cluster-box img{max-width:44%;max-height:100%}
-  .cluster-box.cluster-3 .pkg1{left:0%;top:14%;transform:rotate(-7deg);z-index:1}
-  .cluster-box.cluster-3 .pkg2{left:26%;top:0%;transform:rotate(0deg);z-index:3}
-  .cluster-box.cluster-3 .pkg3{left:54%;top:14%;transform:rotate(7deg);z-index:2}
+  .cluster-box img{max-width:42%;max-height:96%}
+  .cluster-box.cluster-3 .pkg1{left:2%;top:10%;transform:rotate(-8deg);z-index:1}
+  .cluster-box.cluster-3 .pkg2{left:29%;top:0%;transform:rotate(0deg);z-index:3}
+  .cluster-box.cluster-3 .pkg3{left:56%;top:10%;transform:rotate(8deg);z-index:2}
 
-  /* WCT bag cluster (single big flat mockup) */
-  .cluster-bag{height:320px}
-  .cluster-bag img{max-width:82%;max-height:100%;border-radius:12px}
+  .cluster-vape img{max-width:30%;max-height:96%}
+  .cluster-vape.cluster-3 .pkg1{left:8%;top:4%;transform:rotate(-8deg);z-index:1}
+  .cluster-vape.cluster-3 .pkg2{left:35%;top:0%;transform:rotate(0deg);z-index:3}
+  .cluster-vape.cluster-3 .pkg3{left:62%;top:4%;transform:rotate(8deg);z-index:2}
 
-  /* WCT vape cluster */
-  .cluster-vape{height:300px}
-  .cluster-vape img{max-width:34%}
-  .cluster-vape.cluster-3 .pkg1{left:2%;top:0%;transform:rotate(-6deg)}
-  .cluster-vape.cluster-3 .pkg2{left:32%;top:-2%;transform:rotate(0deg);z-index:3}
-  .cluster-vape.cluster-3 .pkg3{left:62%;top:0%;transform:rotate(6deg)}
+  /* Single-image bag/jar/box: perfectly centered by the flex parent. */
+  .cluster-bag img{max-width:78%;max-height:94%;border-radius:12px}
 
   /* center info */
   .info{text-align:center;padding:0 6px}
@@ -103,10 +94,11 @@
   .pricebox-sale .pval{color:var(--red)}
   .pnote{font-size:10px;color:#5a748c;margin-top:6px;font-style:italic}
 
-  /* right tray + features */
-  .tray-col{display:flex;flex-direction:column;align-items:center;gap:8px}
-  .tray-col .tray{max-width:180px;max-height:180px;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(0,0,0,.22))}
-  .features{list-style:none;padding:0;margin:0;font-size:13px;color:#0d1b2a}
+  /* right tray + features — fixed height matches the cluster column so all
+     three columns share the same vertical footprint. */
+  .tray-col{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;min-height:340px;padding:6px}
+  .tray-col .tray{max-width:170px;max-height:200px;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(0,0,0,.22))}
+  .features{list-style:none;padding:0;margin:0;font-size:13px;color:#0d1b2a;text-align:left}
   .features li{padding:2px 0;font-weight:600}
   .features li::before{content:"•  ";color:var(--red);font-weight:900}
 
@@ -749,7 +741,7 @@
 </section>
 <section class="sku sku-wct_preroll brand-WCT" data-brand="WCT" data-oos="0">
   <div class="hero">
-    <div class="cluster cluster-1 cluster-bag"><img class="pkg pkg1" src="assets/wct_preroll_box.jpg" alt="1G PREROLL BULK"></div>
+    <div class="cluster cluster-1 cluster-bag"><img class="pkg pkg1" src="assets/wct_bulk_250.png" alt="1G PREROLL BULK"></div>
     <div class="info">
       <div class="brandbar">
         <img class="brand-logo" src="assets/wct_logo.png" alt="WCT">
@@ -829,7 +821,7 @@
 </section>
 <section class="sku sku-wct_preroll brand-WCT" data-brand="WCT" data-oos="0">
   <div class="hero">
-    <div class="cluster cluster-1 cluster-bag"><img class="pkg pkg1" src="assets/wct_preroll_box.jpg" alt="1G PREROLL 14-CT JAR"></div>
+    <div class="cluster cluster-1 cluster-bag"><img class="pkg pkg1" src="assets/wct_14ct_jars.png" alt="1G PREROLL 14-CT JAR"></div>
     <div class="info">
       <div class="brandbar">
         <img class="brand-logo" src="assets/wct_logo.png" alt="WCT">
