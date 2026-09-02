@@ -138,20 +138,35 @@
   footer .lbs{font-weight:800;letter-spacing:1px}
 
   /* ---------- responsive ---------- */
+  /* Medium screens: keep the 3-column hero as long as it fits, but tighter. */
   @media (max-width:900px){
-    .hero{grid-template-columns:1fr;gap:14px}
-    .cluster{height:220px}
+    .hero{grid-template-columns:1fr;gap:8px;min-height:0}
+    .cluster,.tray-col{min-height:0}
+    .cluster{height:auto;max-width:380px;margin:0 auto;padding:8px}
+    /* Switch 3-image clusters to a horizontal flex row on mobile: images
+       flow side-by-side with sensible sizes instead of absolute-positioned
+       fills that sprawl to fit the card width. */
+    .cluster-3{display:flex;flex-direction:row;align-items:flex-end;justify-content:center;gap:6px;position:static}
+    .cluster-3 img{position:static;max-width:32%;max-height:200px;object-fit:contain}
+    .cluster-pouch.cluster-3 img,.cluster-box.cluster-3 img{max-width:32%;max-height:180px}
+    .cluster-bag img{max-width:60%;max-height:220px}
+    .tray-col{padding:4px 8px 12px}
+    .tray-col .tray{max-width:140px;max-height:150px}
     .strain-grid{grid-template-columns:1fr}
     .col-h-dom{width:78px}
     .col-h-thc{width:56px}
     .top h1{font-size:24px}
     .section-head h2{font-size:20px}
+    .sku{padding:20px 14px 18px}
   }
   @media (max-width:520px){
     .price-split{max-width:280px}
     .pval{font-size:18px}
     .pill{font-size:12px}
     .pill-dom{width:64px;font-size:9px}
+    .cluster{max-width:320px}
+    .cluster-3 img{max-height:170px}
+    .cluster-bag img{max-height:190px}
   }
 </style></head><body>
 <div class="top">
