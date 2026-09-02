@@ -138,8 +138,9 @@
   footer .lbs{font-weight:800;letter-spacing:1px}
 
   /* ---------- responsive ---------- */
-  /* Medium screens: keep the 3-column hero as long as it fits, but tighter. */
-  @media (max-width:900px){
+  /* Only fall back to a stacked layout on true phone widths. Everything
+     wider than 640px keeps the 3-column desktop hero. */
+  @media (max-width:640px){
     .hero{grid-template-columns:1fr;gap:8px;min-height:0}
     .cluster,.tray-col{min-height:0}
     .cluster{height:auto;max-width:380px;margin:0 auto;padding:8px}
@@ -167,6 +168,27 @@
     .cluster{max-width:320px}
     .cluster-3 img{max-height:170px}
     .cluster-bag img{max-height:190px}
+  }
+  /* At 640-1000px keep 3 columns but tighten every piece so it fits without wrapping. */
+  @media (min-width:641px) and (max-width:1000px){
+    .container{padding:14px 8px 40px}
+    .sku{padding:20px 14px 18px}
+    .hero{gap:10px;min-height:300px}
+    .cluster{height:280px;padding:4px}
+    .tray-col{min-height:280px;padding:4px}
+    .tray-col .tray{max-width:120px;max-height:150px}
+    .cluster-pouch img{max-width:56%}
+    .cluster-tube img{max-width:34%}
+    .cluster-box img{max-width:44%}
+    .cluster-vape img{max-width:32%}
+    .cluster-bag img{max-width:82%}
+    .brandbar .brand-logo{height:38px}
+    .cat-badge{width:90%;max-width:220px}
+    .title{font-size:17px}
+    .case{font-size:11px}
+    .features{font-size:11px}
+    .price-split{max-width:260px}
+    .pval{font-size:18px}
   }
 </style></head><body>
 <div class="top">
