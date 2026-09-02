@@ -62,11 +62,10 @@
   .cluster-tube.cluster-3 .pkg2{left:34%;top:-2%;transform:rotate(0deg);z-index:3}
   .cluster-tube.cluster-3 .pkg3{left:62%;top:6%;transform:rotate(10deg);z-index:2}
 
-  /* Jar cluster (14-CT jar mockups): chunkier than tubes so images can be wider. */
-  .cluster-jar img{max-width:50%;max-height:96%;border-radius:8px}
-  .cluster-jar.cluster-3 .pkg1{left:-4%;top:6%;transform:rotate(-8deg);z-index:1}
-  .cluster-jar.cluster-3 .pkg2{left:25%;top:-2%;transform:rotate(0deg);z-index:3}
-  .cluster-jar.cluster-3 .pkg3{left:54%;top:6%;transform:rotate(8deg);z-index:2}
+  /* Jar cluster (14-CT jar mockups): flex row so all 3 jars are always
+     fully visible side-by-side with no clipping, no matter the card width. */
+  .cluster-jar{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:6px;padding:10px 6px}
+  .cluster-jar.cluster-3 img{position:static;max-width:32%;max-height:100%;object-fit:contain;transform:none;border-radius:8px}
 
   .cluster-box img{max-width:42%;max-height:96%}
   .cluster-box.cluster-3 .pkg1{left:2%;top:10%;transform:rotate(-8deg);z-index:1}
@@ -200,7 +199,7 @@
 </style></head><body>
 <div class="top">
   <h1>PUFF &amp; WEST COAST TREEZ</h1>
-  <div class="sub">Live Wholesale Catalog · Updated September 01, 2026</div>
+  <div class="sub">Live Wholesale Catalog · Updated September 02, 2026</div>
   <div class="live">LIVE FROM NABIS INVENTORY</div>
 </div>
 <div class="site-sale">
