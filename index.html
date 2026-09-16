@@ -173,6 +173,23 @@
     .cluster{max-width:320px}
     .cluster-3 img{max-height:170px}
     .cluster-bag img{max-height:190px}
+    /* Mobile strain grid header — hide the middle column labels
+       (DOMINANCE/THC%) since each pill already shows its own chip + THC.
+       Just show STRAIN on the left + count pill on the right. */
+    .strain-head .col-h-dom,.strain-head .col-h-thc{display:none}
+    .strain-head .cnt{white-space:nowrap;font-size:9px;padding:3px 8px}
+    /* Section header (PUFF PREROLLS, etc.): stack logo + heading + tagline
+       centered instead of a row that spreads across the full width. */
+    .section-head{flex-direction:column;gap:6px;margin:28px 0 6px}
+    .section-head img{height:44px}
+    /* Cat badge (STRAIN SPECIFIC oval) — cap width so it doesn't push edges. */
+    .cat-badge{width:78%;max-width:260px}
+    /* Feature bullets — center them under the tray image for a clean look. */
+    .features{text-align:center}
+    /* Info panel padding: give more breathing room from card edges. */
+    .info{padding:0 12px}
+    /* Slightly bigger touch targets in pills. */
+    .pill{padding:9px 10px}
   }
   /* At 640-1000px keep 3 columns but tighten every piece so it fits without wrapping. */
   @media (min-width:641px) and (max-width:1000px){
