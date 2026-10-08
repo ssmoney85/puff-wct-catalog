@@ -143,10 +143,12 @@
   .sku.coming-combo .cluster img:nth-child(1){max-width:26%;max-height:200px}
   .sku.coming-combo .cluster img:nth-child(2){max-width:30%;max-height:240px}
   .sku.coming-combo .cluster img:nth-child(3){max-width:36%;max-height:280px}
-  .combo-table{width:100%;border-collapse:collapse;margin-top:14px;font-size:13px}
-  .combo-table th{background:#0d1b2a;color:#fff;padding:8px 10px;text-align:left;
+  .combo-table{width:100%;border-collapse:collapse;margin-top:14px;font-size:13px;table-layout:fixed}
+  .combo-table th{background:#0d1b2a;color:#fff;padding:9px 6px;text-align:center;
     font-size:10px;letter-spacing:1px;text-transform:uppercase}
-  .combo-table td{padding:10px;border-bottom:1px solid #e4ebf2}
+  .combo-table th:first-child{text-align:left;padding-left:12px}
+  .combo-table td{padding:10px 6px;border-bottom:1px solid #e4ebf2;text-align:center;vertical-align:middle}
+  .combo-table td:first-child{text-align:left;padding-left:12px}
   .combo-table .pack-name{font-weight:800;color:#0d1b2a}
   .combo-table .pack-price{font-weight:900;color:#d4232c;font-size:15px}
   .combo-table tbody tr:hover{background:#f5fbff}
@@ -160,15 +162,20 @@
     .sku.coming-combo .cluster img:nth-child(2){max-width:28%;max-height:145px}
     .sku.coming-combo .cluster img:nth-child(3){max-width:34%;max-height:170px}
     .combo-table{font-size:12px}
-    .combo-table th,.combo-table td{padding:6px 6px}
-    .combo-table .pack-price{font-size:14px}
+    .combo-table th,.combo-table td{padding:7px 4px}
+    .combo-table th:first-child,.combo-table td:first-child{padding-left:8px}
+    .combo-table .pack-price{font-size:13px}
   }
   @media (max-width:520px){
-    .combo-table{display:block;overflow-x:auto;white-space:nowrap}
-    .combo-table th,.combo-table td{padding:6px 8px}
+    .combo-table{font-size:11px}
+    .combo-table th{padding:7px 2px;font-size:9px;letter-spacing:.5px}
+    .combo-table td{padding:8px 2px}
+    .combo-table th:first-child,.combo-table td:first-child{padding-left:6px}
+    .combo-table .pack-price{font-size:12px}
+    .sku.coming-combo{padding:95px 10px 18px}
+    .sku.coming-combo .info{padding:0 4px}
     .coming-banner .cs-main{font-size:30px;letter-spacing:2px}
     .coming-banner .cs-sub{font-size:9px;padding:2px 8px}
-    .sku.coming-combo{padding-top:95px}
   }
   .strain-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 12px;padding:8px 4px 4px}
   .pill{display:flex;align-items:center;background:#fff;border-radius:10px;padding:8px 12px;box-shadow:0 1px 3px rgba(9,54,88,.08);gap:8px;font-size:13px}
