@@ -153,9 +153,10 @@
   .combo-table .pack-price{font-weight:900;color:#d4232c;font-size:15px}
   .combo-table tbody tr:hover{background:#f5fbff}
   @media (max-width:900px){
-    .sku.coming-combo .hero{grid-template-columns:1fr;gap:14px}
+    .sku.coming-combo .hero{grid-template-columns:minmax(0,1fr);gap:14px}
+    .sku.coming-combo .info,.sku.coming-combo .cluster{min-width:0;max-width:100%}
     .sku.coming-combo .cluster{display:flex !important;flex-direction:row;
-      align-items:flex-end;justify-content:center;gap:8px;height:auto;max-width:100%;padding:4px}
+      align-items:flex-end;justify-content:center;gap:8px;height:auto;padding:4px}
     .sku.coming-combo .cluster img{position:static;max-width:30%;max-height:170px;
       object-fit:contain;margin:0}
     .sku.coming-combo .cluster img:nth-child(1){max-width:24%;max-height:120px}
