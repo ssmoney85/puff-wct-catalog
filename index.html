@@ -1,6 +1,9 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PUFF & West Coast Treez — Live Wholesale Catalog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
 <style>
   :root{
     --sky:#4dc7ff; --sky-deep:#1a9ee0; --sky-light:#e6f6ff;
@@ -118,13 +121,35 @@
   .strain-head .cnt.oos{background:#7a2222}
   .strain-head .cnt.coming{background:#1a73e8}
 
-  /* ---------- coming-soon ribbon ---------- */
-  .sku.coming-soon{border:2px solid #1a73e8}
-  .coming-ribbon{position:absolute;top:14px;right:14px;background:#1a73e8;color:#fff;
-    padding:6px 14px;font-size:11px;font-weight:900;letter-spacing:1.5px;
-    border-radius:999px;box-shadow:0 2px 6px rgba(0,0,0,.2);z-index:2}
+  /* ---------- coming-soon banner + combo table ---------- */
+  .sku.coming-soon{border:3px solid #d4232c}
+  .coming-banner{position:absolute;top:18px;left:50%;transform:translateX(-50%);
+    text-align:center;z-index:3;pointer-events:none;
+    text-shadow:0 2px 8px rgba(0,0,0,.25),0 0 20px rgba(255,255,255,.4)}
+  .coming-banner .cs-main{display:block;font-family:'Bungee','Impact',sans-serif;
+    font-size:clamp(32px,5vw,56px);color:#d4232c;letter-spacing:3px;line-height:1;
+    -webkit-text-stroke:1.5px #fff}
+  .coming-banner .cs-sub{display:block;font-family:'Bungee','Impact',sans-serif;
+    font-size:11px;color:#fff;background:#d4232c;padding:3px 12px;
+    letter-spacing:2px;margin-top:4px;border-radius:4px;display:inline-block}
   .sku.coming-soon .pill-thc{opacity:.4;font-size:11px}
   .sku.coming-soon .pricebox-sale{opacity:.55}
+  .sku.coming-combo{padding-top:110px}
+  .sku.coming-combo .hero{grid-template-columns:1.4fr 1fr;align-items:center}
+  .sku.coming-combo .tray-col{display:none}
+  .sku.coming-combo .cluster{align-items:flex-end;justify-content:space-around;gap:4px}
+  .sku.coming-combo .cluster img{position:static;max-width:32%;max-height:280px;
+    margin:0;transform:none;filter:drop-shadow(0 6px 12px rgba(0,0,0,.25))}
+  .sku.coming-combo .cluster img:nth-child(1){max-width:26%;max-height:200px}
+  .sku.coming-combo .cluster img:nth-child(2){max-width:30%;max-height:240px}
+  .sku.coming-combo .cluster img:nth-child(3){max-width:36%;max-height:280px}
+  .combo-table{width:100%;border-collapse:collapse;margin-top:14px;font-size:13px}
+  .combo-table th{background:#0d1b2a;color:#fff;padding:8px 10px;text-align:left;
+    font-size:10px;letter-spacing:1px;text-transform:uppercase}
+  .combo-table td{padding:10px;border-bottom:1px solid #e4ebf2}
+  .combo-table .pack-name{font-weight:800;color:#0d1b2a}
+  .combo-table .pack-price{font-weight:900;color:#d4232c;font-size:15px}
+  .combo-table tbody tr:hover{background:#f5fbff}
   .strain-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 12px;padding:8px 4px 4px}
   .pill{display:flex;align-items:center;background:#fff;border-radius:10px;padding:8px 12px;box-shadow:0 1px 3px rgba(9,54,88,.08);gap:8px;font-size:13px}
   .pill-name{flex:1;font-weight:700;color:#0d1b2a}
@@ -818,116 +843,29 @@
   </div>
   
 </section>
-<section class="sku sku-wct_prerollz brand-WCT coming-soon" data-brand="WCT" data-oos="0">
-  <div class="coming-ribbon">COMING OCT 15</div>
+<section class="sku sku-wct_prerollz brand-WCT coming-soon coming-combo" data-brand="WCT" data-oos="0">
+  <div class="coming-banner" aria-hidden="true"><span class="cs-main">COMING SOON</span><span class="cs-sub">LAUNCH DATE · OCT 15</span></div>
   <div class="hero">
-    <div class="cluster cluster-1 cluster-bag"><img class="pkg pkg1" src="assets/wct_prerollz_7ct.png" alt="PRE-ROLLZ 7-PACK"></div>
+    <div class="cluster cluster-3 cluster-tube"><img class="pkg pkg1" src="assets/wct_prerollz_7ct.png" alt="WCT PRE-ROLLZ"><img class="pkg pkg2" src="assets/wct_prerollz_14ct.png" alt="WCT PRE-ROLLZ"><img class="pkg pkg3" src="assets/wct_prerollz_28ct.png" alt="WCT PRE-ROLLZ"></div>
     <div class="info">
       <div class="brandbar">
         <img class="brand-logo" src="assets/wct_logo.png" alt="WCT">
         <span class="tagline">get lit for less</span>
       </div>
       
-      <h2 class="title">PRE-ROLLZ 7-PACK</h2>
-      <div class="case">7 Half Gram Pre-Rolls · 3.5g</div>
+      <h2 class="title">WCT PRE-ROLLZ</h2>
+      <div class="case">More Rolls. More Value.</div>
       
-        <div class="price-split">
-          <div class="pricebox pricebox-ws">
-            <div class="plabel">WHOLESALE</div>
-            <div class="pval">$5.99</div>
-          </div>
-          <div class="pricebox pricebox-sale">
-            <div class="plabel">15% OFF</div>
-            <div class="pval">$5.09</div>
-          </div>
-        </div>
-        <div class="pnote">*Spend $3K+ for sitewide 15% off · List price per unit</div>
+        <table class="combo-table">
+          <thead><tr>
+            <th>Pack</th><th>Each</th><th>Total weight</th><th>Wholesale</th><th>Case</th>
+          </tr></thead>
+          <tbody><tr><td class='pack-name'>7-count</td><td>0.5 g</td><td>3.5 g / 1/8 oz</td><td class='pack-price'>$5.99</td><td>16 units</td></tr><tr><td class='pack-name'>14-count</td><td>0.5 g</td><td>7 g / 1/4 oz</td><td class='pack-price'>$8.49</td><td>16 units</td></tr><tr><td class='pack-name'>28-count</td><td>0.5 g</td><td>14 g / 1/2 oz</td><td class='pack-price'>$15.99</td><td>8 units</td></tr></tbody>
+        </table>
     </div>
     <div class="tray-col">
-      <img class="tray" src="assets/wct_preroll_hero.png" alt="PRE-ROLLZ 7-PACK">
-      <ul class="features"><li>More Rolls</li><li>More Value</li><li>California Grown</li></ul>
-    </div>
-  </div>
-  <div class="strain-block">
-    <div class="strain-head">
-      <span class="col-h">STRAIN</span>
-      <span class="col-h col-h-dom">DOMINANCE</span>
-      <span class="col-h col-h-thc">THC%</span>
-      <span class="cnt coming">COMING OCT 15</span>
-    </div>
-    <div class="strain-grid"><div class="pill" data-text="mac"><span class="pill-name">MAC</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">—</span></div><div class="pill" data-text="mango haze"><span class="pill-name">Mango Haze</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">—</span></div><div class="pill" data-text="super silver haze"><span class="pill-name">Super Silver Haze</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">—</span></div><div class="pill" data-text="blue gelato"><span class="pill-name">Blue Gelato</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">—</span></div></div>
-  </div>
-  
-</section>
-<section class="sku sku-wct_prerollz brand-WCT coming-soon" data-brand="WCT" data-oos="0">
-  <div class="coming-ribbon">COMING OCT 15</div>
-  <div class="hero">
-    <div class="cluster cluster-1 cluster-bag"><img class="pkg pkg1" src="assets/wct_prerollz_14ct.png" alt="PRE-ROLLZ 14-PACK"></div>
-    <div class="info">
-      <div class="brandbar">
-        <img class="brand-logo" src="assets/wct_logo.png" alt="WCT">
-        <span class="tagline">get lit for less</span>
-      </div>
-      
-      <h2 class="title">PRE-ROLLZ 14-PACK</h2>
-      <div class="case">14 Half Gram Pre-Rolls · 7g</div>
-      
-        <div class="price-split">
-          <div class="pricebox pricebox-ws">
-            <div class="plabel">WHOLESALE</div>
-            <div class="pval">$8.49</div>
-          </div>
-          <div class="pricebox pricebox-sale">
-            <div class="plabel">15% OFF</div>
-            <div class="pval">$7.22</div>
-          </div>
-        </div>
-        <div class="pnote">*Spend $3K+ for sitewide 15% off · List price per unit</div>
-    </div>
-    <div class="tray-col">
-      <img class="tray" src="assets/wct_preroll_hero.png" alt="PRE-ROLLZ 14-PACK">
-      <ul class="features"><li>More Rolls</li><li>More Value</li><li>California Grown</li></ul>
-    </div>
-  </div>
-  <div class="strain-block">
-    <div class="strain-head">
-      <span class="col-h">STRAIN</span>
-      <span class="col-h col-h-dom">DOMINANCE</span>
-      <span class="col-h col-h-thc">THC%</span>
-      <span class="cnt coming">COMING OCT 15</span>
-    </div>
-    <div class="strain-grid"><div class="pill" data-text="mac"><span class="pill-name">MAC</span><span class="pill-dom dom-hybrid">HYBRID</span><span class="pill-thc">—</span></div><div class="pill" data-text="mango haze"><span class="pill-name">Mango Haze</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">—</span></div><div class="pill" data-text="super silver haze"><span class="pill-name">Super Silver Haze</span><span class="pill-dom dom-sativa">SATIVA</span><span class="pill-thc">—</span></div><div class="pill" data-text="blue gelato"><span class="pill-name">Blue Gelato</span><span class="pill-dom dom-indica">INDICA</span><span class="pill-thc">—</span></div></div>
-  </div>
-  
-</section>
-<section class="sku sku-wct_prerollz brand-WCT coming-soon" data-brand="WCT" data-oos="0">
-  <div class="coming-ribbon">COMING OCT 15</div>
-  <div class="hero">
-    <div class="cluster cluster-1 cluster-bag"><img class="pkg pkg1" src="assets/wct_prerollz_28ct.png" alt="PRE-ROLLZ 28-PACK"></div>
-    <div class="info">
-      <div class="brandbar">
-        <img class="brand-logo" src="assets/wct_logo.png" alt="WCT">
-        <span class="tagline">get lit for less</span>
-      </div>
-      
-      <h2 class="title">PRE-ROLLZ 28-PACK</h2>
-      <div class="case">28 Half Gram Pre-Rolls · 14g</div>
-      
-        <div class="price-split">
-          <div class="pricebox pricebox-ws">
-            <div class="plabel">WHOLESALE</div>
-            <div class="pval">$15.99</div>
-          </div>
-          <div class="pricebox pricebox-sale">
-            <div class="plabel">15% OFF</div>
-            <div class="pval">$13.59</div>
-          </div>
-        </div>
-        <div class="pnote">*Spend $3K+ for sitewide 15% off · List price per unit</div>
-    </div>
-    <div class="tray-col">
-      <img class="tray" src="assets/wct_preroll_hero.png" alt="PRE-ROLLZ 28-PACK">
-      <ul class="features"><li>More Rolls</li><li>More Value</li><li>California Grown</li></ul>
+      <img class="tray" src="assets/wct_preroll_hero.png" alt="WCT PRE-ROLLZ">
+      <ul class="features"></ul>
     </div>
   </div>
   <div class="strain-block">
