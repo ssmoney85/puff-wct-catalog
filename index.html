@@ -150,6 +150,26 @@
   .combo-table .pack-name{font-weight:800;color:#0d1b2a}
   .combo-table .pack-price{font-weight:900;color:#d4232c;font-size:15px}
   .combo-table tbody tr:hover{background:#f5fbff}
+  @media (max-width:900px){
+    .sku.coming-combo .hero{grid-template-columns:1fr;gap:14px}
+    .sku.coming-combo .cluster{display:flex !important;flex-direction:row;
+      align-items:flex-end;justify-content:center;gap:8px;height:auto;max-width:100%;padding:4px}
+    .sku.coming-combo .cluster img{position:static;max-width:30%;max-height:170px;
+      object-fit:contain;margin:0}
+    .sku.coming-combo .cluster img:nth-child(1){max-width:24%;max-height:120px}
+    .sku.coming-combo .cluster img:nth-child(2){max-width:28%;max-height:145px}
+    .sku.coming-combo .cluster img:nth-child(3){max-width:34%;max-height:170px}
+    .combo-table{font-size:12px}
+    .combo-table th,.combo-table td{padding:6px 6px}
+    .combo-table .pack-price{font-size:14px}
+  }
+  @media (max-width:520px){
+    .combo-table{display:block;overflow-x:auto;white-space:nowrap}
+    .combo-table th,.combo-table td{padding:6px 8px}
+    .coming-banner .cs-main{font-size:30px;letter-spacing:2px}
+    .coming-banner .cs-sub{font-size:9px;padding:2px 8px}
+    .sku.coming-combo{padding-top:95px}
+  }
   .strain-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 12px;padding:8px 4px 4px}
   .pill{display:flex;align-items:center;background:#fff;border-radius:10px;padding:8px 12px;box-shadow:0 1px 3px rgba(9,54,88,.08);gap:8px;font-size:13px}
   .pill-name{flex:1;font-weight:700;color:#0d1b2a}
